@@ -29,9 +29,10 @@ const ADMIN_CORS =
 const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
 
 const DATABASE_URL =
-  process.env.DATABASE_URL || "postgres://localhost/medusa-starter-default";
+  "postgresql://postgres:baMYfNCAWMnPnbPQTEpHramIbIAclIJQ@viaduct.proxy.rlwy.net:39547/railway";
 
-const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+const REDIS_URL =
+  "redis://default:MZnLNUGmcEPFbYqnZvgeCsjjGCrLPgLn@viaduct.proxy.rlwy.net:44972";
 
 const plugins = [
   `medusa-fulfillment-manual`,
@@ -87,8 +88,9 @@ const projectConfig = {
   store_cors: STORE_CORS,
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
+  worker_mode: "server",
   // Uncomment the following lines to enable REDIS
-  // redis_url: REDIS_URL
+  redis_url: REDIS_URL,
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
