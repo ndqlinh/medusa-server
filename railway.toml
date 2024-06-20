@@ -5,4 +5,4 @@ builder = "NIXPACKS"
 nixPkgs = ["nodejs", "yarn"]
 
 [build.nixpacksPlan.phases.install]
-cmds=["yarn install"]
+cmds = ["yarn install --omit=dev"]
